@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Baraja {
 	private Integer numCartas=48;
-	private Integer siguiente;
+	private Integer siguiente=0;
 	private final Integer CARTAS_POR_PALO=12;
 	
 	
@@ -66,11 +66,11 @@ public class Baraja {
 	
 	public Carta getSiguiente() {
 		
-		int contador=0;
 		
-		Carta siguienteCarta=this.listaCartas[contador];
 		
-		contador++;
+		Carta siguienteCarta=this.listaCartas[siguiente];
+		
+		siguiente++;
 		
 		
 		return siguienteCarta;
